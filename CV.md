@@ -14,14 +14,15 @@ Concentration: Plant Breeding and Genetics
 ## Academic Research Experience
 
 **Graduate Research Assistant**
-April 2016-
-CEMB program
-Department of Horticulture
-University of Arkansas
+: April 2016-
+: CEMB program
+: Department of Horticulture
+: University of Arkansas
 
 **Graduate Research Assistant (MS)**
-September 2012-September 2015
-Dept. of Horticulture, Oregon State University
+: September 2012-September 2015
+: Dept. of Horticulture, Oregon State University
+
 -------------------------------------------------
 ## Extension and Field Experience
 **Livelihood Promotion Officer**
