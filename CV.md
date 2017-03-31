@@ -41,24 +41,24 @@ Elective: Plant Breeding
 ## Extension and Field Experience
 ***Livelihood Promotion Officer***
 
-	*RERL (GoN/UNDP/WB)*
+	RERL (GoN/UNDP/WB)
 
-	*January 2012 - July 2012*
+	January 2012 - July 2012
 
 
 ***Subjet Matter Specialist***
 
-	*CDS / CADP*
+	CDS/CADP
 
-	*March 2011 - December 2011*
+	March 2011 - December 2011
 
 
 ***Internship***
 
-	*Horticulture crop, ISRAEL.*
+	Horticulture crop, ISRAEL.
 
-	*October 2009- July 2010*
+	October 2009- July 2010
 _____________________________________________________
 ## Publication
-Please visit my personal page for publication: http://www.gehendrabhattarai.wixsite.com/info/publications
+	Please visit my personal page for publication: http://www.gehendrabhattarai.wixsite.com/info/publications
 
