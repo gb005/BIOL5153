@@ -19,7 +19,7 @@ Elective: Plant Breeding
 
 ## Academic Research Experience
 
-**Graduate Research Assistant**
+**Graduate Research Assistant (PhD)**
 
 	April 2016--
 
@@ -33,21 +33,25 @@ Elective: Plant Breeding
 
 	September 2012-September 2015
 
-	Dept. of Horticulture, Oregon State University
+	Dept. of Horticulture
+	
+	Oregon State University
 -------------------------------------------------
 
 ## Extension and Field Experience
 ***Livelihood Promotion Officer***
 
-**RERL (GoN/UNDP/WB)**
+	**RERL (GoN/UNDP/WB)**
 
-**January 2012 - July 2012**
+	**January 2012 - July 2012**
+
 
 ***Subjet Matter Specialist***
 
-**CDS / CADP**
+	**CDS / CADP**
 
-**March 2011 - December 2011**
+	**March 2011 - December 2011**
+
 
 ***Internship***
 
