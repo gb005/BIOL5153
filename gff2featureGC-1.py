@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[442]:
+# In[444]:
 
 # declare the file names
 gff_file = 'watermelon.gff'
@@ -130,4 +130,12 @@ print("repeat_region    ", length_repeats , "  ",'(',round(percent_repeats,2),"%
 percent_trna = (length_trna/genome_length)*100 
 GC_trna = (((trna.count('G') + trna.count('C'))/length_trna)*100)
 print("tRNA             ", length_trna , "  ",'(',round(percent_trna,2),"%",')', "   ", round(GC_trna,2))
+
+# output after running the codes are shown below:
+# exon              32442    ( 8.55 % )    43.12
+# intron            32476    ( 8.56 % )    51.37
+# misc_feature      24282    ( 6.4 % )     37.39
+# rRNA              5148    ( 1.36 % )     52.45
+# repeat_region     14572    ( 3.84 % )    45.66
+# tRNA              1358    ( 0.36 % )     50.22
 
