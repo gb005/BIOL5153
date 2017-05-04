@@ -131,38 +131,59 @@ for line in gff_in:
     fragment = clean_seq(fragment)
     #print(fragment)
     
+    if(fields[6]=='-'):
+        fragment=reverse(fragment)
+    
+    # store the big concatenated thing for calculating GC content
     if type in feature_sequences:
         feature_sequences[type] += fragment
     else:
-        feature_sequences[type]=fragment
+        feature_sequences[type] = fragment
         
-    if type == 'CDS':
-        gene_feature = fields[8]
-        gene1 = gene_feature.split(':')
-        gene = gene1[0]
-        gene_seq = genome[start-1:end]
-        #print(gene)
-        #print(gene_seq)
+    # determine if there are multiple exons
+    if(type == 'CDS'):
+        # get the gene name
+        #print(fields[8])
+        attributes = fields[8].split(' ; ')
+        #print(attributes[0])
         
+        gene_fields = attributes[0].split(' ')
+        #print(gene_fields)
+        gene_name = gene_fields[1]
+        #print(gene_name)
         
+        fragment = genome[start-1:end]
+        #print(fragment)
+        fragment = clean_seq(fragment)
+        #print(fragment)
+    
         if strand == '-':
             complement_sequence = reverse(gene_seq)
             exon_sequences[gene] = complement_sequence
         else:
             exon_sequences[gene] = gene_seq
-    # print(exon_sequences)
-    # print(gene)
-    
-#close tthe file
-gff_in.close()
+        
+        #print(exon_sequences)
+        #print(gene)
 
-# now need to order the exon sequences
+# here we create dictionary ordered sequences of the exons 
 ordered_exons_sequences = collections.OrderedDict(sorted(exon_sequences.items()))
+#print(ordered_exons_sequences)
 
-#for exon, sequence in ordered_exons_sequences.items():
-    #print(">", exon, "\n", sequence)
-    # this prints the exons along with the sequences in fasta fmt
-    
+# concatenate sequences of each exon
+for gene_feature, sequences in ordered_exons_sequences.items():
+        new_exon = gene_feature.split(' ')
+        #print(new_exon)
+        if new_exon[0] in gene_sequences:
+                gene_sequences[new_exon[0]] += sequence
+        else:
+                gene_sequences[new_exon[0]] = sequence
+        #print(sequence)            
+            
+#print(">", exon, "\n", sequence)  # this prints the exons along with the sequences in fasta fmt
+
+
+#calculating the nucleotide composition
 for feature, sequence in feature_sequences.items():
     (feature_length, cover, feature_comp) = nuc_freq(sequence, base1='C',base2='G',sig_digs=2)
     
@@ -172,7 +193,19 @@ for feature, sequence in feature_sequences.items():
     #feature_length = nuc_freq(sequence, base1, base2, sigs_digs=2) #check
     #print(feature_length) #check
     #print(feature + "          \t" + str(len(sequence))) #check
-   
+
+    
+# generating and prining gene sequences
+#print(sequence) there is sequence with info
+    #print(exon_sequences)
+    
+
+# print gene sequence in fasta fomat 
+print("\n","Gene sequence in fasta format")
+for gene, sequence in gene_sequences.items():
+    print(">" + gene)
+    print(sequence + "\n")
+    
 
 
 # In[ ]:
